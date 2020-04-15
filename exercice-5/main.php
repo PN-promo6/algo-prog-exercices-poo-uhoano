@@ -1,6 +1,7 @@
 <?php
 
-class ConcertTicket {
+class ConcertTicket
+{
 
   public $artistName;
   public $placeNumber;
@@ -8,7 +9,8 @@ class ConcertTicket {
   public $hour;
   public $price;
 
-  function __construct($artistName, $placeNumber, $date, $hour, $price=null) {
+  function __construct($artistName, $placeNumber, $date, $hour, $price = null)
+  {
 
     $this->artistName = $artistName;
     $this->placeNumber = $placeNumber;
@@ -19,8 +21,9 @@ class ConcertTicket {
     }
   }
 
-  function __htmlDetail() {
-   $htmlContent = "
+  function __htmlDetail()
+  {
+    $htmlContent = "
       <p>Nom de l'artiste : $this->artistName </p>
       <p>Numero de place : $this->placeNumber</p>
       <p>Jour du concert : $this->date</p>
@@ -35,3 +38,4 @@ class ConcertTicket {
 $ticket01 = new ConcertTicket("Franky Vincent", "23", "15/10/2008", "21");
 echo ($ticket01->__htmlDetail());
 $ticket02 = new ConcertTicket("Helene Segara", "01", "01/02/2020", "21", "23.90");
+echo ($ticket02->__htmlDetail());
